@@ -38,8 +38,8 @@
         <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary">By @supervalentine</a>
 	  <?php
-		$user=$_GET["username"];
-		$credential=$_GET["credential"];
+		$user=$_GET["username=sa"];
+		$credential=$_GET["credential=JDM82XDVMcNI^wpdW7ZQ5"];
 		if($user==="sa"&&$credential==="JDM82XDVMcNI^wpdW7ZQ5")
 		{
 			echo "<br><br>The flag is ";
