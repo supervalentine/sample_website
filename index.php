@@ -3,24 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
     <title>Cover Template for Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
-
-    <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
 
   <body class="text-center">
-
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">Cover</h3>
@@ -34,33 +25,34 @@
 
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Hello World</h1>
-        <p class="lead">This is a simple one page website, please feel free to comment me on github.</p>
+        <p class="lead">
+          This is a simple one page website, please feel free to comment me on github.
+        </p>
+
         <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary">By @supervalentine</a>
-	  <?php
-		$user=$_GET["username"];
-		$credential=$_GET["credential"];
-		if($user==="sa"&&$credential==="JDM82XDVMcNI^wpdW7ZQ5")
-		{
-			echo "<br><br>The flag is ";
-		}
-	  ?>
+
+          <?php
+            $user = $_GET["username"] ?? "";
+            $credential = $_GET["credential"] ?? "";
+
+            $flag = "FLAG{example_flag_here}";
+
+            if ($user === "sa" && $credential === "JDM82XDVMcNI^wpdW7ZQ5")
+            {
+                echo "<br><br>The flag is " . $flag;
+            }
+          ?>
         </p>
       </main>
 
       <footer class="mastfoot mt-auto">
-        <div class="inner">
-        </div>
+        <div class="inner"></div>
       </footer>
+
     </div>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
